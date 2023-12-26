@@ -5,9 +5,23 @@
   Once you've implemented the logic, test your code by running
   - `npm run test-palindrome`
 */
-
-function isPalindrome(str) {
-  return true;
+function split(str){
+  let s = "";
+  for(let i = str.length-1;i>=0;i--){
+  s+=str[i];
 }
+return s;
+}
+function isPalindrome(str) {
+  let reverse = split(str);
+   if(str.toLowerCase()===reverse.toLowerCase()){
+   return true; 
+   }
+  else{
+    return false;
+  }
+}
+let result= isPalindrome("Nan");
+console.log(result);
 
 module.exports = isPalindrome;
